@@ -1,0 +1,124 @@
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #f8f9fa;
+    --text-color: #212529;
+    --border-color: #dee2e6;
+    --card-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --link-color: #007bff;
+    --table-text: #212529;
+    --table-bg: #ffffff;
+    --summary-text: #212529;
+}
+
+[data-theme="dark"] {
+    --primary-bg: #212529;
+    --secondary-bg: #2c3034;
+    --text-color: #f8f9fa;
+    --border-color: #495057;
+    --card-shadow: 0 0.125rem 0.25rem rgba(255, 255, 255, 0.075);
+    --link-color: #66b0ff;
+    --table-text: #f8f9fa;
+    --table-bg: #121416;
+    --hover-bg: #2c3034;
+}
+
+body {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card {
+    background-color: var(--primary-bg);
+    border-color: var(--border-color);
+    box-shadow: var(--card-shadow);
+}
+
+.table {
+    color: var(--table-text);
+    background-color: var(--table-bg) !important;
+}
+
+.table tr:hover {
+    background-color: var(--hover-bg);
+}
+
+.table thead {
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+}
+
+.table tbody tr {
+    background-color: var(--table-bg) !important;
+}
+
+.table td, .table th {
+    border-color: var(--border-color);
+    background-color: var(--table-bg) !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--secondary-bg) !important;
+}
+
+.table-responsive {
+    background-color: var(--table-bg) !important;
+}
+
+.table-container {
+    background-color: var(--table-bg) !important;
+}
+
+a {
+    color: var(--link-color);
+}
+
+.text-dark {
+    color: var(--text-color) !important;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-color);
+    background-color: transparent;
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+#darkModeToggle {
+    border-color: var(--text-color);
+    color: var(--text-color);
+}
+
+.filters {
+    min-width: 150px;
+}
+
+.btn-action {
+    padding: 0.25rem 0.5rem;
+    margin: 0 0.25rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .row {
+        margin: 0;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .table-responsive {
+        margin: 0 -1rem;
+    }
+}
